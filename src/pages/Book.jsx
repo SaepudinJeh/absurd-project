@@ -78,7 +78,7 @@ const PageCover = React.forwardRef((props, ref) => {
 
         <div className="flex flex-col text-amber-800 text-center font-labelle">
           {props?.children ? (
-            <h1 className="text-5xl text-amber">{props.children}</h1>
+            <h2 className="text-5xl text-amber">{props.children}</h2>
           ) : null}
 
           {props?.desc ? <h4 className="text-amber">{props.desc}</h4> : null}
