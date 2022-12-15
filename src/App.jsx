@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoadingText from "./loaders/LoadingText";
+import Flower from "./pages/Flower";
 import Sertificate from "./pages/Sertificate";
 
 const Intro = lazy(() => import("./pages/Intro"));
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Intro />} />
             <Route path="/my-book" element={<BookStory />} />
             <Route path="/sertificate" element={<Sertificate />} />
+            <Route path="/your-flowers" element={<Flower />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

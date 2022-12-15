@@ -4,12 +4,13 @@ import bgImage from "../assets/images/bg_cover.jpg";
 import flower from "../assets/images/flower.png";
 import bear from "../assets/images/bear.png";
 import { useNavigate } from "react-router-dom";
+import Galeries from "../components/Galeries";
 
 export default function BookStory({}) {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/sertificate");
+    navigate("/your-flowers");
   };
 
   return (
@@ -34,7 +35,9 @@ export default function BookStory({}) {
         <PageCover img={flower} desc="Naar oneindigheid en verder" />
 
         <Page number={1}>Lorem ipsum...</Page>
-        <Page number={2}>Lorem ipsum...</Page>
+        <Page number={2}>
+          <Galeries />
+        </Page>
         <Page number={3}>Lorem ipsum...</Page>
         <Page number={4}>Lorem ipsum...</Page>
         <Page number={5}>Lorem ipsum...</Page>
@@ -51,15 +54,15 @@ export default function BookStory({}) {
 
 const Page = React.forwardRef((props, ref) => {
   return (
-    <div className="page font-labelle text-amber-800 text-xl" ref={ref}>
+    <div
+      className="page font-labelle text-amber-800 text-xl overflow-hidden"
+      ref={ref}
+    >
       <div
-        className="page-content h-full"
+        className="page-content h-full overflow-hidden"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <h2 className="page-header">Page header - {props.number}</h2>
-        <div className="page-image"></div>
-        <div className="page-text">{props.children}</div>
-        <div className="page-footer">{props.number + 1}</div>
+        <div>{props?.children}</div>
       </div>
     </div>
   );
