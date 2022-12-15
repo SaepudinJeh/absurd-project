@@ -1,10 +1,12 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import HTMLFlipBook from "react-pageflip";
 import bgImage from "../assets/images/bg_cover.jpg";
 import flower from "../assets/images/flower.png";
 import bear from "../assets/images/bear.png";
+import alip from "../assets/images/alip_1.png";
 import { useNavigate } from "react-router-dom";
-import Galeries from "../components/Galeries";
+
+const Galeries = lazy(() => import("../components/Galeries"));
 
 export default function BookStory({}) {
   const navigate = useNavigate();
@@ -28,15 +30,17 @@ export default function BookStory({}) {
         mobileScrollSupport={true}
         className="demo-book overflow-hidden"
       >
-        <PageCover img={bear} desc="It's just you in my universe">
+        <PageCover img={alip} shadow sepia desc="It's just you in my universe">
           Rafflesia bloem
         </PageCover>
 
-        <PageCover img={flower} desc="Naar oneindigheid en verder" />
+        <PageCover img={bear} desc="Naar oneindigheid en verder" />
 
         <Page number={1}>Lorem ipsum...</Page>
         <Page number={2}>
-          <Galeries />
+          <Suspense fallback={<div>Loading ....</div>}>
+            <Galeries />
+          </Suspense>
         </Page>
         <Page number={3}>Lorem ipsum...</Page>
         <Page number={4}>Lorem ipsum...</Page>
@@ -76,7 +80,12 @@ const PageCover = React.forwardRef((props, ref) => {
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div className="w-48">
-          <img src={props.img} alt="img-cover" loading="lazy" />
+          <img
+            src={props.img}
+            alt="img-cover"
+            loading="lazy"
+            className={`${props?.sepia && "sepia"}`}
+          />
         </div>
 
         <div className="flex flex-col text-amber-800 text-center font-labelle">

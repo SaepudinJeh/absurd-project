@@ -8,3 +8,7 @@
   --color-water: linear-gradient(to left, #142544, #1b6d6e);
   --dark-color: #000;
 }
+
+.black-and-white {
+  filter: brightness(70%) contrast(150%) saturate(0%) brightness(150%);
+}
