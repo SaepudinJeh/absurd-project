@@ -7,7 +7,7 @@ export default function Galeries({}) {
           Jadi jelema mah kudu jujur jeung hampang birit méh loba nu mikaresep
         </p>
       </div>
-      <div className="columns-2 md:columns-3 overflow-hidden">
+      <div className="columns-2 md:columns-3 px-7">
         <img
           src="https://picsum.photos/seed/picsum/300/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"

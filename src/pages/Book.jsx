@@ -14,19 +14,19 @@ export default function BookStory({}) {
   };
 
   return (
-    <div className="w-full flex items-center justify-center h-screen bg-amber-50">
+    <div className="w-full flex items-center justify-center h-screen bg-amber-50 overflow-hidden">
       <HTMLFlipBook
-        width={550}
-        height={733}
-        size="stretch"
+        width={500}
+        height={533}
+        size="fixed"
         minWidth={315}
         maxWidth={1000}
-        minHeight={400}
+        minHeight={300}
         maxHeight={1533}
         maxShadowOpacity={0.7}
         showCover={true}
         mobileScrollSupport={true}
-        className="demo-book"
+        className="demo-book overflow-hidden"
       >
         <PageCover img={bear} desc="It's just you in my universe">
           Rafflesia bloem
@@ -59,7 +59,7 @@ const Page = React.forwardRef((props, ref) => {
       ref={ref}
     >
       <div
-        className="page-content h-full overflow-hidden"
+        className="page-content h-full overflow-y-auto"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div>{props?.children}</div>

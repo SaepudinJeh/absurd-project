@@ -5,12 +5,12 @@ export default function Flower({}) {
   const navigation = useNavigate();
 
   const handleNextPage = () => {
-    navigation("/your-flowers-part-2");
+    navigation("/your-flowers-part-2", { replace: true });
   };
 
   return (
-    <div className="bg-flowers flex flex-col gap-y-10 pt-32">
-      <div className="flower">
+    <div className="bg-flowers flex flex-col gap-y-10 pt-32 overflow-hidden">
+      <div className="flower_1">
         <div className="f-wrapper">
           <div className="flower__line"></div>
           <div className="f">
