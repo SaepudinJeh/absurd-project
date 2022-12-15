@@ -7,15 +7,15 @@ export default function Galeries({}) {
           Jadi jelema mah kudu jujur jeung hampang birit méh loba nu mikaresep
         </p>
       </div>
-      <div className="columns-3 md:columns-4 overflow-hidden">
+      <div className="columns-2 md:columns-3 overflow-hidden">
         <img
-          src="https://picsum.photos/seed/picsum/200/300"
+          src="https://picsum.photos/seed/picsum/300/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
           loading="lazy"
         />
         <img
-          src="https://picsum.photos/seed/picsum/200/600"
+          src="https://picsum.photos/seed/picsum/300/600"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
           loading="lazy"
@@ -27,25 +27,25 @@ export default function Galeries({}) {
           loading="lazy"
         />
         <img
-          src="https://picsum.photos/seed/picsum/200/300"
+          src="https://picsum.photos/seed/picsum/300/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
           loading="lazy"
         />
         <img
-          src="https://picsum.photos/seed/picsum/200/300"
+          src="https://picsum.photos/seed/picsum/300/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
           loading="lazy"
         />
         <img
-          src="https://picsum.photos/seed/picsum/200/300"
+          src="https://picsum.photos/seed/picsum/300/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
           loading="lazy"
         />
         <img
-          src="https://picsum.photos/seed/picsum/200/300"
+          src="https://picsum.photos/seed/picsum/300/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
           loading="lazy"
