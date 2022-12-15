@@ -12,36 +12,43 @@ export default function Galeries({}) {
           src="https://picsum.photos/seed/picsum/200/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
         <img
           src="https://picsum.photos/seed/picsum/200/600"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
         <img
           src="https://picsum.photos/seed/picsum/600/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
         <img
           src="https://picsum.photos/seed/picsum/200/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
         <img
           src="https://picsum.photos/seed/picsum/200/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
         <img
           src="https://picsum.photos/seed/picsum/200/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
         <img
           src="https://picsum.photos/seed/picsum/200/300"
           className="my-3 ml-4 rounded-lg shadow-lg shadow-amber-700/50"
           alt=""
+          loading="lazy"
         />
       </div>
     </div>

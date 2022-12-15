@@ -30,17 +30,17 @@ export default function Intro({}) {
   return (
     <div className="w-full flex-col gap-y-10 h-screen bg-gradient-to-t from-gray-700 to-black justify-center items-center flex">
       {!install ? (
-        <>
+        <div className="flex justify-center items-center text-center flex-col">
           <Typing />
 
           <button
             onClick={handleNext}
-            className="bg-white px-4 py-1.5 rounded-full glass hover:text-white duration-300"
+            className="bg-white px-4 py-1.5 rounded-full glass hover:text-white duration-300 mt-20"
             name="button next"
           >
             Next
           </button>
-        </>
+        </div>
       ) : (
         <Code status={statusInstall} />
       )}

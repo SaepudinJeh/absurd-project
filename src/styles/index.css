@@ -6,4 +6,5 @@
   --color-bg: linear-gradient(to top, #010329, #000005);
   --color-glass: linear-gradient(to left, #142544, #1a9092);
   --color-water: linear-gradient(to left, #142544, #1b6d6e);
+  --dark-color: #000;
 }

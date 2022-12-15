@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/flowers.css";
 
 export default function Flower({}) {
+  const navigation = useNavigate();
+
+  const handleNextPage = () => {
+    navigation("/your-flowers-part-2");
+  };
+
   return (
     <div className="bg-flowers flex flex-col gap-y-10 pt-32">
       <div className="flower">
@@ -54,7 +61,13 @@ export default function Flower({}) {
           Semoga dan semoganya <b>kamu</b> :)
         </p>
 
-        <button className="mt-7 text-xl">Next</button>
+        <button
+          onClick={handleNextPage}
+          className="mt-7 text-xl"
+          name="next page"
+        >
+          Next
+        </button>
       </div>
     </div>
   );
