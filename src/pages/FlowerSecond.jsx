@@ -24,11 +24,7 @@ export default function FlowerSecond({}) {
   }, []);
 
   return (
-    <div
-      className={`${
-        viewFlower ? "not-loaded" : null
-      } bg-flower-second overflow-hidden`}
-    >
+    <div className={`${viewFlower ? "not-loaded" : null} bg-flower-second`}>
       <div className="night" />
       <div className="flowers">
         <div className="flower flower--1">
