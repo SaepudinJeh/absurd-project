@@ -2,9 +2,10 @@ export default function Galeries({}) {
   return (
     <div className="w-full h-fit overflow-hidden">
       <div className="text-center py-4">
-        <h1 className="pt-3">My Galeries</h1>
-        <p className="text-center text-xs">
-          Jadi jelema mah kudu jujur jeung hampang birit méh loba nu mikaresep
+        <h1 className="pt-3">My Flower</h1>
+        <p className="text-center text-base px-20 leading-5 mt-4">
+          If you love a flower that lives on a star, it is sweet to look at the
+          sky at night. All the stars are a-bloom with flowers..
         </p>
       </div>
       <div className="columns-2 md:columns-3 px-7 mb-16">

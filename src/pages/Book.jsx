@@ -2,11 +2,21 @@ import React, { lazy, Suspense } from "react";
 import HTMLFlipBook from "react-pageflip";
 import bgImage from "../assets/images/bg_cover.jpg";
 import flower from "../assets/images/flower.png";
-import bear from "../assets/images/bear.png";
+import flower_prince from "../assets/images/prince_flower.png";
 import alip from "../assets/images/alip_1.png";
 import { useNavigate } from "react-router-dom";
 
 const Galeries = lazy(() => import("../components/Galeries"));
+const QuoteTheLittePrince = lazy(() =>
+  import("../components/QuoteFoxLittlePrince")
+);
+const QuoteFlowerTheLittePrince = lazy(() =>
+  import("../components/QuoteFlowerPrince")
+);
+
+const QuoteTheLittePrinceEnd = lazy(() =>
+  import("../components/QuotePrinceEnd")
+);
 
 export default function BookStory({}) {
   const navigate = useNavigate();
@@ -31,20 +41,31 @@ export default function BookStory({}) {
         className="demo-book overflow-hidden"
       >
         <PageCover img={alip} shadow sepia desc="It's just you in my universe">
-          Rafflesia bloem
+          Rode Roos
         </PageCover>
 
-        <PageCover img={bear} desc="Naar oneindigheid en verder" />
+        <PageCover img={flower_prince} desc="Rode roos" />
 
-        <Page number={1}>Lorem ipsum...</Page>
+        <Page number={1}>
+          <Suspense fallback={<div>Loading ....</div>}>
+            <QuoteTheLittePrince />
+          </Suspense>
+        </Page>
         <Page number={2}>
+          <Suspense fallback={<div>Loading ....</div>}>
+            <QuoteFlowerTheLittePrince />
+          </Suspense>
+        </Page>
+        <Page number={3}>
+          <Suspense fallback={<div>Loading ....</div>}>
+            <QuoteTheLittePrinceEnd />
+          </Suspense>
+        </Page>
+        <Page number={4}>
           <Suspense fallback={<div>Loading ....</div>}>
             <Galeries />
           </Suspense>
         </Page>
-        <Page number={3}>Lorem ipsum...</Page>
-        <Page number={4}>Lorem ipsum...</Page>
-        <Page number={5}>Lorem ipsum...</Page>
 
         <PageCover
           img={flower}
